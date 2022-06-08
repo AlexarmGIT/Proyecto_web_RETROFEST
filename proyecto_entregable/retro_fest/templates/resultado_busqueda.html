@@ -1,0 +1,35 @@
+{% extends "inicio.html" %}
+
+{% load static %}
+
+{% block contenido %} 
+<h3>Se encontro el siguiente  resultado </h3>
+{% if alta_conocidos %}
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">DNI</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+
+     {% for n in alta_conocidos %}
+     <tr> 
+      <th>{{n.id}}</th>
+      <td>{{n.nombre}}</td>
+      <td>{{n.apellido}}</td>
+      <td>{{n.dni}}</td>
+     </tr>
+     {% endfor %}
+     {% else %}
+        <h1><b>No se encontro registro con el NOMBRE indicado!!</b></h1>
+        {% endif %}
+
+    </table>    
+
+{% endblock %}        

@@ -1,0 +1,50 @@
+ {% extends "inicio.html" %}
+
+    {% load static %}
+    
+{% block contenido %} 
+    
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Puesto</th>
+            <th scope="col">Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+
+         {% for n in datos %}
+         <tr> 
+          <th>{{n.id}}</th>
+          <td>{{n.nombre}}</td>
+          <td>{{n.puesto}}</td>
+          <td>{{n.edad}}</td>
+         </tr>
+         {% endfor %}  
+        </tbody>
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">marca</th>
+            <th scope="col">cuit</th>
+          </tr>
+        </thead>
+        <tbody>
+
+         {% for n in amistad %}
+         <tr> 
+          <th>{{n.id}}</th>
+          <td>{{n.nombre}}</td>
+          <td>{{n.marca}}</td>
+          <td>{{n.cuit}}</td>
+         </tr>
+         {% endfor %}  
+        </tbody>
+
+         
+    </table>    
+{% endblock %}

@@ -1,0 +1,11 @@
+.cabeza{
+    background-color: red;
+    background: url(../assets/img/retrofest.jpg);   
+     color: blue;
+    height: 300px;
+
+}
+header h1{
+    color: red;
+    padding: 4rem ;
+}
